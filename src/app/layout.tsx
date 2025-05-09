@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Poppins } from "next/font/google";
+import "katex/dist/katex.min.css";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],

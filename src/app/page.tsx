@@ -16,6 +16,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { InfoComponent } from "@/components/info";
+import { InlineMath } from "react-katex";
 
 export default function Home() {
   const [notaA1, setNotaA1] = useState(0);
@@ -31,22 +32,27 @@ export default function Home() {
   };
 
   const infoContent = (
-    <div className="space-y-2 text-sm">
-      <p>
-        Fórmula usada: <code>((A1) + 2 * (A2)) / 3</code>
-      </p>
-      <p>
-        Onde A1 = mb1 + ma1 + p1 = <strong>{notaA1}</strong>
-      </p>
-      <p>
-        Meta de média: 5, com bônus de palestra:{" "}
-        <strong>{bonusTrabalho ? "Sim (+0,5)" : "Não"}</strong>
-      </p>
-      <p>
-        Importante: o valor de A2 não define diretamente as notas de mb2, ma2 e
-        p2, apenas o total combinado necessário.
-      </p>
-    </div>
+    <section className="space-y-4 text-sm">
+      <header className="flex items-center gap-2">
+        <span className="font-medium">Média:</span>
+        <span className="text-lg">
+          <InlineMath math={`\\frac{A1 + 2 \\cdot A2}{3}`} />
+        </span>
+      </header>
+      <ul className="list-disc pl-5 spacey2">
+        <li>
+          <span>A1 = mb1 + ma1 + p1 = </span> <strong>{notaA1}</strong>
+        </li>
+        <li>
+          Meta de média: 5 <span> | Bônus de palestra: </span>
+          <strong>{bonusTrabalho ? "Sim (+0,5)" : "Não"}</strong>
+        </li>
+        <li>
+          O valor de A2 representa o total combinado necessário, não definindo
+          as notas de mb2, ma2 e p2 isoladamente.
+        </li>
+      </ul>
+    </section>
   );
 
   return (
