@@ -35,10 +35,12 @@ export function InfoComponent({ isMobile, children }: InfoComponentProps) {
           </Button>
         </DrawerTrigger>
         <DrawerContent>
-          <DrawerHeader>
-            <DrawerTitle>Metodologia de Cálculo</DrawerTitle>
-          </DrawerHeader>
-          <div className="p-4">{children}</div>
+          <div className="p-10 space-y-6">
+            <DrawerHeader className="p-0">
+              <DrawerTitle>Metodologia de Cálculo</DrawerTitle>
+            </DrawerHeader>
+            <div className="">{children}</div>
+          </div>
         </DrawerContent>
       </Drawer>
     );

@@ -43,8 +43,9 @@ export default function Home() {
         <li>
           <span>A1 = mb1 + ma1 + p1 = </span> <strong>{notaA1}</strong>
         </li>
+        <li>Meta de média: 5</li>
         <li>
-          Meta de média: 5 <span> | Bônus de palestra: </span>
+          Bônus de palestra:{" "}
           <strong>{bonusTrabalho ? "Sim (+0,5)" : "Não"}</strong>
         </li>
         <li>
@@ -89,7 +90,7 @@ export default function Home() {
                   checked={bonusTrabalho}
                   onCheckedChange={() => setBonusTrabalho(!bonusTrabalho)}
                 />
-                <Label htmlFor="bonusTrabalho">
+                <Label htmlFor="bonusTrabalho" className="text-sm/5">
                   Congresso/semana da engenharia (+0,5 na média)
                 </Label>
               </div>
@@ -101,9 +102,10 @@ export default function Home() {
           {resultado !== null && (
             <Card>
               <CardContent>
-                <div className="text-center text-lg font-medium flex items-center justify-center gap-2">
+                <div className="text-center text-sm font-medium flex sm:text-lg items-center justify-center gap-2">
                   Você precisa tirar{" "}
-                  <span className="font-bold">{resultado}</span> na A2.
+                  <span className="font-bold">{resultado}</span>
+                  {isMobile ? null : <span>na A2</span>}
                   <InfoComponent isMobile={isMobile}>
                     {infoContent}
                   </InfoComponent>
