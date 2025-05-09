@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Poppins } from "next/font/google";
 import "katex/dist/katex.min.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
