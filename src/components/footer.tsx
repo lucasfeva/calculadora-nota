@@ -6,7 +6,13 @@ export default function Footer() {
       </p>
       <p className="text-sm text-muted-foreground">
         Desenvolvido por{" "}
-        <a target="_blank" href="https://www.instagram.com/lucasfevaa" className="">Lucas Ferreira.</a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/lucasfevaa"
+          className="text-primary"
+        >
+          Lucas Ferreira.
+        </a>
       </p>
     </footer>
   );
