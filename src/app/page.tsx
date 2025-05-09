@@ -20,20 +20,15 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      {" "}
+    <main className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
-        {" "}
         <Card>
-          {" "}
           <CardContent className="p-6 space-y-4">
-            {" "}
             <h1 className="text-2xl font-bold text-center">
               Calculadora de Nota Final
-            </h1>{" "}
-            <p className="text-sm text-center text-gray-600">
-              {" "}
-              Descubra quanto precisa tirar na A2 para passar na disciplina.{" "}
+            </h1>
+            <p className="text-sm text-center text-muted-foreground">
+              Descubra quanto precisa tirar na A2 para passar na disciplina.
             </p>
             <div className="space-y-2">
               <Label htmlFor="notaA1">Nota A1</Label>
@@ -57,7 +52,7 @@ export default function Home() {
                 Vou fazer o trabalho (+0,5 na média)
               </Label>
             </div>
-            <Button onClick={calcular} className="w-full">
+            <Button onClick={calcular} className="w-full" variant="secondary">
               Calcular
             </Button>
             {resultado !== null && (
