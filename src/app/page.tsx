@@ -19,14 +19,15 @@ import { InfoComponent } from "@/components/info";
 import { InlineMath } from "react-katex";
 
 export default function Home() {
-  const [notaA1, setNotaA1] = useState(0);
+  const [notaA1, setNotaA1] = useState("");
   const [bonusTrabalho, setBonusTrabalho] = useState(false);
   const [resultado, setResultado] = useState<number | null>(null);
   const isMobile = useIsMobile();
 
   const calcular = () => {
+    const numNotaA1 = parseFloat(notaA1) || 0;
     const mediaNecessaria = 5 - (bonusTrabalho ? 0.5 : 0);
-    const numerador = mediaNecessaria * 3 - notaA1;
+    const numerador = mediaNecessaria * 3 - numNotaA1;
     const notaA2 = numerador / 2;
     setResultado(Number(notaA2.toFixed(2)));
   };
@@ -81,7 +82,19 @@ export default function Home() {
                   min="0"
                   max="10"
                   value={notaA1}
-                  onChange={(e) => setNotaA1(parseFloat(e.target.value))}
+                  onChange={(e) => {
+                    let newValue = e.target.value;
+                    if (newValue.length > 1 && newValue.startsWith("0")) {
+                      newValue = newValue.replace(/^0+/, "");
+                      if (newValue === "") newValue = "0";
+                    }
+                    const num = parseFloat(newValue);
+                    if (!Number.isNaN(num)) {
+                      if (num > 10) newValue = "10";
+                      if (num < 0) newValue = "0";
+                    }
+                    setNotaA1(newValue);
+                  }}
                 />
               </div>
               <div className="flex items-center space-x-2">
