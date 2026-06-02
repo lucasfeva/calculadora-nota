@@ -59,6 +59,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-between min-h-screen bg-background">
+      {/* Background blur orbs */}
+      <div className="pointer-events-none fixed inset-0 overflow-hidden -z-10">
+        <div className="absolute -top-48 -left-48 w-[700px] h-[700px] rounded-full bg-blue-400/25 blur-[130px]" />
+        <div className="absolute -bottom-48 -right-48 w-[700px] h-[700px] rounded-full bg-blue-600/20 blur-[130px]" />
+        <div className="absolute top-1/3 left-2/3 w-[400px] h-[400px] rounded-full bg-blue-300/20 blur-[100px]" />
+      </div>
       <Header />
       <main className="flex items-center flex-1 justify-center p-4">
         <div className="w-full max-w-md space-y-6">
@@ -107,7 +113,7 @@ export default function Home() {
                   Congresso/semana da engenharia (+0,5 na média)
                 </Label>
               </div>
-              <Button onClick={calcular} className="w-full" variant="secondary">
+              <Button onClick={calcular} className="w-full" variant="default">
                 Calcular
               </Button>
             </CardContent>

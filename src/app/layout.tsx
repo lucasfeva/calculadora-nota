@@ -13,11 +13,32 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Calcular Nota",
-  description: "Calculadora de Nota Final",
+  description:
+    "Descubra quanto você precisa tirar na A2 para passar na disciplina. Calcule sua nota final de forma rápida e simples.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "Calcular Nota",
+    description:
+      "Descubra quanto você precisa tirar na A2 para passar na disciplina. Calcule sua nota final de forma rápida e simples.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Calcular Nota",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Calcular Nota",
+    description:
+      "Descubra quanto você precisa tirar na A2 para passar na disciplina. Calcule sua nota final de forma rápida e simples.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -48,8 +69,8 @@ export default function RootLayout({
         />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}

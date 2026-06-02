@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center p-4 bg-card text-primary">
+    <header className="flex justify-between items-center p-4 bg-white/50 backdrop-blur-md border-b border-blue-100/60 text-foreground sticky top-0 z-10">
       <h1 className="text-xl font-bold">Calcular Nota</h1>
       <Button variant="ghost" size="icon" asChild>
         <Link href="https://github.com/lucasfeva/" target="_blank">
