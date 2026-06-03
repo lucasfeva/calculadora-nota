@@ -1656,7 +1656,7 @@ export default function ResumoPararela() {
         {/* CONTEÚDO PRINCIPAL */}
         <main
           ref={mainRef}
-          style={{ flex: 1, overflowY: "auto", padding: "0 24px 40px" }}
+          style={{ flex: 1, overflowY: "auto", padding: "0 8px" }}
         >
           {/* HERO */}
           <div
