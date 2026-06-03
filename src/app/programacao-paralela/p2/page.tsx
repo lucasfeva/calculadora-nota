@@ -106,7 +106,7 @@ function SectionHeader({
         gap: 12,
         marginBottom: 16,
         paddingBottom: 12,
-        borderBottom: "1px solid #2a3148",
+        borderBottom: "1px solid #2a2a2a",
       }}
     >
       <div
@@ -129,7 +129,7 @@ function SectionHeader({
         <div
           style={{
             fontSize: 10,
-            color: "#8892aa",
+            color: "#888888",
             fontFamily: "var(--mono)",
             marginTop: 2,
           }}
@@ -191,8 +191,8 @@ function Card({
   return (
     <div
       style={{
-        background: "#1e2535",
-        border: "1px solid #2a3148",
+        background: "#1a1a1a",
+        border: "1px solid #2a2a2a",
         borderRadius: 8,
         padding: 10,
       }}
@@ -207,7 +207,7 @@ function Card({
       >
         {title}
       </div>
-      <div style={{ fontSize: 11, color: "#8892aa", lineHeight: 1.5 }}>
+      <div style={{ fontSize: 11, color: "#888888", lineHeight: 1.5 }}>
         {children}
       </div>
     </div>
@@ -218,8 +218,8 @@ function CodeBlock({ children }: { children: ReactNode }) {
   return (
     <pre
       style={{
-        background: "#0a0d14",
-        border: "1px solid #2a3148",
+        background: "#080808",
+        border: "1px solid #2a2a2a",
         borderRadius: 6,
         padding: "12px",
         overflowX: "auto",
@@ -239,8 +239,8 @@ function Inl({ children }: { children: ReactNode }) {
   return (
     <code
       style={{
-        background: "#0a0d14",
-        border: "1px solid #2a3148",
+        background: "#080808",
+        border: "1px solid #2a2a2a",
         borderRadius: 4,
         padding: "1px 5px",
         fontSize: 11,
@@ -258,7 +258,7 @@ function Divider() {
     <hr
       style={{
         border: "none",
-        borderTop: "1px solid #2a3148",
+        borderTop: "1px solid #2a2a2a",
         margin: "14px 0",
       }}
     />
@@ -271,7 +271,7 @@ function H3({ children }: { children: ReactNode }) {
       style={{
         fontSize: 12,
         fontWeight: 700,
-        color: "#e8ecf4",
+        color: "#eeeeee",
         margin: "12px 0 8px",
       }}
     >
@@ -333,19 +333,19 @@ function CmpTable({
         style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}
       >
         <thead>
-          <tr style={{ background: "#1e2535" }}>
+          <tr style={{ background: "#1a1a1a" }}>
             {headers.map((h, i) => (
               <th
                 key={i}
                 style={{
                   padding: "6px 10px",
                   textAlign: "left",
-                  color: "#8892aa",
+                  color: "#888888",
                   fontFamily: "var(--mono)",
                   fontSize: 9,
                   textTransform: "uppercase",
                   letterSpacing: 1,
-                  borderBottom: "1px solid #2a3148",
+                  borderBottom: "1px solid #2a2a2a",
                   width: widths?.[i],
                 }}
               >
@@ -360,7 +360,7 @@ function CmpTable({
               key={ri}
               style={{
                 borderBottom:
-                  ri < rows.length - 1 ? "1px solid #2a3148" : "none",
+                  ri < rows.length - 1 ? "1px solid #2a2a2a" : "none",
               }}
             >
               {row.map((cell, ci) => {
@@ -375,7 +375,7 @@ function CmpTable({
                     style={{
                       padding: "6px 10px",
                       verticalAlign: "top",
-                      color: c.color ?? "#e8ecf4",
+                      color: c.color ?? "#eeeeee",
                       fontWeight: c.bold ? 700 : 400,
                     }}
                   >
@@ -399,9 +399,9 @@ function Pipeline({ steps }: { steps: { label: string; sub?: string }[] }) {
           key={i}
           style={{
             flex: 1,
-            background: "#1e2535",
-            border: "1px solid #2a3148",
-            borderLeft: i === 0 ? "1px solid #2a3148" : "none",
+            background: "#1a1a1a",
+            border: "1px solid #2a2a2a",
+            borderLeft: i === 0 ? "1px solid #2a2a2a" : "none",
             padding: "8px 4px",
             textAlign: "center",
             fontSize: 11,
@@ -415,7 +415,7 @@ function Pipeline({ steps }: { steps: { label: string; sub?: string }[] }) {
         >
           <b>{s.label}</b>
           {s.sub && (
-            <div style={{ color: "#8892aa", fontSize: 10 }}>{s.sub}</div>
+            <div style={{ color: "#888888", fontSize: 10 }}>{s.sub}</div>
           )}
         </div>
       ))}
@@ -678,7 +678,7 @@ function S3() {
               display: "flex",
               gap: 12,
               padding: "12px 0",
-              borderBottom: "1px solid #2a3148",
+              borderBottom: "1px solid #2a2a2a",
               alignItems: "flex-start",
             }}
           >
@@ -702,7 +702,7 @@ function S3() {
               <div
                 style={{
                   fontSize: 11,
-                  color: "#8892aa",
+                  color: "#888888",
                   marginBottom: 3,
                   lineHeight: 1.5,
                 }}
@@ -804,7 +804,7 @@ function S4() {
       </InfoBox>
 
       <H3>Padrão Sidecar</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 8 }}>
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 8 }}>
         Container auxiliar que melhora a app principal muitas vezes sem o
         conhecimento dela.
       </p>
@@ -825,8 +825,8 @@ function S4() {
 
       <Divider />
       <H3>Padrão Adapter</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 6 }}>
-        <b style={{ color: "#e8ecf4" }}>Problema:</b> apps diferentes geram logs
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 6 }}>
+        <b style={{ color: "#eeeeee" }}>Problema:</b> apps diferentes geram logs
         em formatos variados; sistema central exige uniformidade.
       </p>
       <p style={{ fontSize: 12, marginBottom: 14 }}>
@@ -837,8 +837,8 @@ function S4() {
 
       <Divider />
       <H3>Padrão Ambassador</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 6 }}>
-        <b style={{ color: "#e8ecf4" }}>Problema:</b> app precisa acessar bancos
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 6 }}>
+        <b style={{ color: "#eeeeee" }}>Problema:</b> app precisa acessar bancos
         fragmentados e múltiplos serviços sem conhecer a topologia de rede.
       </p>
       <p style={{ fontSize: 12, marginBottom: 12 }}>
@@ -901,7 +901,7 @@ function S5() {
       />
 
       <H3>Serviços Replicados (Stateless)</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 8 }}>
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 8 }}>
         Escalonamento horizontal atrás de um Load Balancer. Ideal para serviços
         sem estado.
       </p>
@@ -921,7 +921,7 @@ function S5() {
 
       <Divider />
       <H3>Sharding — Serviços Fragmentados</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 8 }}>
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 8 }}>
         Quando dados não cabem em uma máquina. Cada réplica possui uma parte do
         estado global.
       </p>
@@ -938,7 +938,7 @@ function S5() {
 
       <Divider />
       <H3>Padrão Scatter/Gather — Escalabilidade de Tempo</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 8 }}>
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 8 }}>
         Distribui uma requisição complexa para múltiplos nós simultaneamente e
         consolida as respostas.
       </p>
@@ -996,9 +996,9 @@ function S6() {
       />
 
       <H3>Work Queue — Filas de Trabalho</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 8 }}>
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 8 }}>
         Processamento em lote onde cada item é{" "}
-        <b style={{ color: "#e8ecf4" }}>independente</b>. Foca em
+        <b style={{ color: "#eeeeee" }}>independente</b>. Foca em
         confiabilidade, não em latência.
       </p>
       <ul style={{ padding: 0, marginBottom: 14 }}>
@@ -1047,7 +1047,7 @@ function S6() {
       </ul>
 
       <H3>FaaS — Processamento Orientado a Eventos</H3>
-      <p style={{ fontSize: 12, color: "#8892aa", marginBottom: 8 }}>
+      <p style={{ fontSize: 12, color: "#888888", marginBottom: 8 }}>
         Código executado em resposta a gatilhos (upload, login, webhook).
         Escalabilidade automática (Serverless).
       </p>
@@ -1236,7 +1236,7 @@ function S8() {
             "Design de Processamento",
             {
               text: "Sequencial, multi-step (grava no disco)",
-              color: "#8892aa",
+              color: "#888888",
             },
             {
               text: "Etapa única em memória (In-Memory)",
@@ -1255,7 +1255,7 @@ function S8() {
           ],
           [
             "Ecossistema",
-            { text: "Acoplado ao HDFS e YARN", color: "#8892aa" },
+            { text: "Acoplado ao HDFS e YARN", color: "#888888" },
             {
               text: "Agnóstico: S3, Cassandra, Delta Lake",
               color: "#4ade80",
@@ -1264,7 +1264,7 @@ function S8() {
           ],
           [
             "Tolerância a Falhas",
-            { text: "Replicação física dos dados", color: "#8892aa" },
+            { text: "Replicação física dos dados", color: "#888888" },
             {
               text: "Reconstrução via Grafo de Linhagem (DAG)",
               color: "#4ade80",
@@ -1273,8 +1273,8 @@ function S8() {
           ],
           [
             "Uso ideal",
-            { text: "Batch massivo seguro, I/O sequencial", color: "#8892aa" },
-            { text: "ML, Streaming, consultas iterativas", color: "#8892aa" },
+            { text: "Batch massivo seguro, I/O sequencial", color: "#888888" },
+            { text: "ML, Streaming, consultas iterativas", color: "#888888" },
           ],
         ]}
       />
@@ -1380,8 +1380,8 @@ function S9() {
       >
         <div
           style={{
-            background: "#1e2535",
-            border: "1px solid #2a3148",
+            background: "#1a1a1a",
+            border: "1px solid #2a2a2a",
             borderRadius: 8,
             padding: 12,
           }}
@@ -1397,15 +1397,15 @@ function S9() {
             Speedup (S)
           </div>
           <CodeBlock>S = T_sequencial / T_paralelo</CodeBlock>
-          <div style={{ fontSize: 11, color: "#8892aa" }}>
+          <div style={{ fontSize: 11, color: "#888888" }}>
             Grandeza própria (sem unidade). Ex: S = 70/40 ={" "}
-            <b style={{ color: "#e8ecf4" }}>1.75</b>. Speedup de 10 = altíssimo.
+            <b style={{ color: "#eeeeee" }}>1.75</b>. Speedup de 10 = altíssimo.
           </div>
         </div>
         <div
           style={{
-            background: "#1e2535",
-            border: "1px solid #2a3148",
+            background: "#1a1a1a",
+            border: "1px solid #2a2a2a",
             borderRadius: 8,
             padding: 12,
           }}
@@ -1421,9 +1421,9 @@ function S9() {
             Eficiência (E)
           </div>
           <CodeBlock>E = S / P</CodeBlock>
-          <div style={{ fontSize: 11, color: "#8892aa" }}>
+          <div style={{ fontSize: 11, color: "#888888" }}>
             P = número de processadores. Ex: E = 1.75/3 ={" "}
-            <b style={{ color: "#e8ecf4" }}>58%</b>. Mede aproveitamento real.
+            <b style={{ color: "#eeeeee" }}>58%</b>. Mede aproveitamento real.
           </div>
         </div>
       </div>
@@ -1484,10 +1484,10 @@ function S9() {
 // ─── ESTILOS ──────────────────────────────────────────────────────────────────
 
 const sectionStyle = {
-  background: "#161b27",
-  border: "1px solid #2a3148",
+  background: "#111111",
+  border: "1px solid #2a2a2a",
   borderRadius: 12,
-  padding: 20,
+  padding: 8,
   marginBottom: 16,
   scrollMarginTop: 16,
 };
@@ -1531,7 +1531,7 @@ export default function ResumoPararela() {
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
         :root { --mono: 'IBM Plex Mono', monospace; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: #0f1117; color: #e8ecf4; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background: #000000; color: #eeeeee; font-family: 'Segoe UI', system-ui, sans-serif; }
         pre { white-space: pre-wrap; word-break: break-all; }
         p { margin-bottom: 0; }
         @media (max-width: 640px) { .sidebar-nav { display: none !important; } }
@@ -1541,8 +1541,8 @@ export default function ResumoPararela() {
         style={{
           display: "flex",
           height: "100vh",
-          background: "#0f1117",
-          color: "#e8ecf4",
+          background: "#000000",
+          color: "#eeeeee",
           fontFamily: "'Segoe UI', system-ui, sans-serif",
           fontSize: 14,
         }}
@@ -1553,8 +1553,8 @@ export default function ResumoPararela() {
           style={{
             width: 220,
             flexShrink: 0,
-            background: "#161b27",
-            borderRight: "1px solid #2a3148",
+            background: "#111111",
+            borderRight: "1px solid #2a2a2a",
             padding: "16px 0",
             display: "flex",
             flexDirection: "column",
@@ -1564,7 +1564,7 @@ export default function ResumoPararela() {
           <div
             style={{
               padding: "0 16px 16px",
-              borderBottom: "1px solid #2a3148",
+              borderBottom: "1px solid #2a2a2a",
               marginBottom: 8,
             }}
           >
@@ -1572,7 +1572,7 @@ export default function ResumoPararela() {
               style={{
                 fontSize: 9,
                 fontFamily: "var(--mono)",
-                color: "#8892aa",
+                color: "#888888",
                 letterSpacing: 2,
                 textTransform: "uppercase",
                 marginBottom: 4,
@@ -1595,7 +1595,7 @@ export default function ResumoPararela() {
             <div
               style={{
                 fontSize: 10,
-                color: "#8892aa",
+                color: "#888888",
                 marginTop: 3,
                 fontFamily: "var(--mono)",
               }}
@@ -1623,13 +1623,13 @@ export default function ResumoPararela() {
                     background: isActive
                       ? "rgba(79,142,247,.15)"
                       : "transparent",
-                    color: isActive ? "#4f8ef7" : "#e8ecf4",
+                    color: isActive ? "#4f8ef7" : "#eeeeee",
                     border: "none",
                     textAlign: "left",
                     transition: "background .15s, color .15s",
                   }}
                   onMouseEnter={(e) => {
-                    if (!isActive) e.currentTarget.style.background = "#1e2535";
+                    if (!isActive) e.currentTarget.style.background = "#1a1a1a";
                   }}
                   onMouseLeave={(e) => {
                     if (!isActive)
@@ -1640,7 +1640,7 @@ export default function ResumoPararela() {
                     style={{
                       fontFamily: "var(--mono)",
                       fontSize: 9,
-                      color: "#8892aa",
+                      color: "#888888",
                       minWidth: 20,
                     }}
                   >
@@ -1663,7 +1663,7 @@ export default function ResumoPararela() {
             style={{
               textAlign: "center",
               padding: "32px 16px 24px",
-              borderBottom: "1px solid #2a3148",
+              borderBottom: "1px solid #2a2a2a",
               marginBottom: 24,
               position: "relative",
             }}
@@ -1693,7 +1693,7 @@ export default function ResumoPararela() {
             >
               Programação Paralela &amp; Distribuída
             </h1>
-            <p style={{ color: "#8892aa", fontSize: 12 }}>
+            <p style={{ color: "#888888", fontSize: 12 }}>
               Resumo focado para a prova — Aulas 7 a 12
             </p>
             <div
@@ -1743,7 +1743,7 @@ export default function ResumoPararela() {
             style={{
               textAlign: "center",
               padding: 20,
-              color: "#8892aa",
+              color: "#888888",
               fontFamily: "var(--mono)",
               fontSize: 10,
             }}
