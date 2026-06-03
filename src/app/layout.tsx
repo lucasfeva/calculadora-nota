@@ -12,6 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://calcularnota.com.br"),
   title: "Calcular Nota",
   description:
     "Descubra quanto você precisa tirar na A2 para passar na disciplina. Calcule sua nota final de forma rápida e simples.",
