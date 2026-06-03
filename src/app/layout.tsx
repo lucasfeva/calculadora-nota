@@ -25,21 +25,24 @@ export const metadata: Metadata = {
     title: "Calcular Nota",
     description:
       "Descubra quanto você precisa tirar na A2 para passar na disciplina. Calcule sua nota final de forma rápida e simples.",
+    url: "https://calcularnota.com.br",
+    siteName: "Calcular Nota",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png?v=2",
         width: 1200,
         height: 630,
         alt: "Calcular Nota",
       },
     ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Calcular Nota",
     description:
       "Descubra quanto você precisa tirar na A2 para passar na disciplina. Calcule sua nota final de forma rápida e simples.",
-    images: ["/og-image.png"],
+    images: ["/og-image.png?v=2"],
   },
 };
 
