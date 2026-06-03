@@ -1534,6 +1534,7 @@ export default function ResumoPararela() {
         body { background: #0f1117; color: #e8ecf4; font-family: 'Segoe UI', system-ui, sans-serif; }
         pre { white-space: pre-wrap; word-break: break-all; }
         p { margin-bottom: 0; }
+        @media (max-width: 640px) { .sidebar-nav { display: none !important; } }
       `}</style>
 
       <div
@@ -1548,7 +1549,7 @@ export default function ResumoPararela() {
       >
         {/* SIDEBAR */}
         <nav
-          className="hidden md:block"
+          className="sidebar-nav"
           style={{
             width: 220,
             flexShrink: 0,
